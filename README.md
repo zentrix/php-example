@@ -4,14 +4,24 @@
   * [función ctype_digit](http://php.net/manual/es/function.ctype-digit.php")
   * [función ctype_alpha](http://php.net/manual/es/function.ctype-alpha.php")
   * [función ctype_alnum](http://php.net/manual/es/function.ctype-alnum.php")
+   - - -
   
-  Array que contiene los valores a comparar
+  Se declara un array con
 ```php
-$datos = [ "1", "a", '2', "b", "3", "c", "4", "d", "5", "e2"]; 
+$datos = [ "1", "a", '2', "b", "3", "c", "4", "d", "5", "e2"];
+```
+- - -
+Para hacerlo mas eficiente se iteran los datos a comparar. 
 
+```php 
 for($i=0; $i<10; $i++){
-    // la funcion ctype_digit() compara si solo hay numeros en la variable de entrada.
-		if (ctype_digit($datos[$i])) { 
+```
+- - - 
+Se usara la función `ctype_digit()` La cual compara los caracteres y regresa true si son puros numeros
+
+```php
+	if (ctype_digit($datos[$i])) { 
+
           // la funcion echo solo se imprime la varieble es un numero.
 			echo $datos[$i]." Es un numero <br>"; 
 		} 
